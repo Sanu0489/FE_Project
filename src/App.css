@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  .App.light {
+    background-color: #fcfdfd;
+  }
+  
+  .App.dark {
+    background-color: #020303;
+  }
+
+  .light {
+    color: #fcfdfd;
+  }
+  
+  .dark {
+    color: #020303;
+  }
+  
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    background-color: #0d4773;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    z-index: 10;
+    border-bottom: 2px solid #020303
+  }
+  
+  header.dark {
+    background-color: #8cc6f2;
+    border-bottom: 2px solid #fcfdfd;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .logo {
+    height: 40px;
+    width: 200px;
+    padding-left: 20px;
+  }
+
+  .logo.dark {
+    fill: #020303;
+  }
+
+  .logo.light {
+    fill: #fcfdfd;
+  } 
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  #toggleLabel {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  
+
+  .App.light {
+    background-color: #fcfdfd;
+    height: 100vh;
+    background: url(/public/assets/images/daytimesky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .App.dark {
+    background-color: #020303;
+    height: 100vh;
+    background: url(/public/assets/images/nighttimesky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .page-content {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    width: 800px;
+    max-width: 1440px;
+    min-width: 1024px;
+    margin: auto; 
+    background-color: #fcfdfd;
+    box-shadow: 10px 0 10px -4px rgba(0, 0, 0, 0.5), -10px 0 10px -4px rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 52px);
+  }
+  
+  .page-content.dark {
+    background-color: #020303;
+    box-shadow: 10px 0 10px -4px rgba(255, 255, 255, 0.5), -10px 0 10px -4px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Title box */
+  .title-box {
+    width: 800px;
+    height: 300px;
+    background-color: #60a9e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: #fcfdfd;
+    margin: auto;
+  }
+  
+  .title-box.dark {
+    background-color: #1e679f;
+    color: #020303;
+    fill: #020303;
+  }
+  
+  .titleLogo svg {
+    width: 80px;
+    height: 80px;
+    transition: fill 0.3s ease;
+  }
+  
+  .title-box.light .titleLogo.light svg{
+    fill: #fcfdfd !important;
+  }
+
+
+  
+  .title-box.dark .titleLogo.dark svg{
+    fill: #020303 !important; 
+  }
+
+  .title-box h1 {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .title-box.light h1 {
+    color: #fcfdfd;
+  }
+  
+  .title-box.dark h1 {
+    color: #020303;
+  }
+  
+  /* Icons row */
+  .icon-row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px;
+    background-color: #fcfdfd;
+    width: 800px;
+    margin: auto;
+    height: 100vh;
+  }
+  
+  .icon-row.dark {
+    background-color: #020303;
+  }
+  .icon {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    fill: #0d4773;
+  }
+
+  .icon.dark {
+    fill: #8cc6f2;
+  }
+
+  .icon.light:hover {
+    fill: #fcfdfd !important;
+  }
+
+  .icon.dark:hover {
+    fill: #020303 !important;   
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 140px;  
+    height: 140px; 
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+  }
+  
+
+  .icon-container .icon {
+    width: 80px; 
+    height: 80px;
+    transition: fill 0.3s ease;
+  }
+  
+  
+  .icon-container.light .icon {
+    fill: #0d4773; 
+  }
+  
+  .icon-container.dark .icon {
+    fill: #8cc6f2; 
+  }
+  
+ 
+  .icon-container.light:hover .icon {
+    fill: #fcfdfd; 
+  }
+  
+  .icon-container.dark:hover .icon {
+    fill: #020303; 
+  }
+  
+  .icon-container.light:hover {
+    background-color: #0d4773;  
+  }
+  
+  .icon-container.dark:hover {
+    background-color: #8cc6f2;  
+  }
+  
+
+  .notification-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    background-color: rgba(0, 0, 0, 0.73);
+    color: white;
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  .notification-bar.dark {
+    background-color: rgba(255, 255, 255, 0.40);
+    color: white;
+    border-top: 2px solid white;
+  }
+  
+  .notification-bar.visible {
+    opacity: 1;
+  }
+
+@media (max-width: 1024px) {
+  .page-content {
+    width: 800px;
+    margin: auto;
+    overflow-x: auto; 
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .page-content {
+    width: 1024px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1441px) {
+  .page-content {
+    width: 1440px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: auto;
+  }
+}
+  
